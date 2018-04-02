@@ -1,0 +1,119 @@
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<!--<link rel="stylesheet" href="./css/bootstrap-theme.min.css">-->
+<link rel="stylesheet" href="./css/custom.css">
+</head>
+
+<body>
+
+
+
+    <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="#">Admin</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#aboutModal">About</a></li>
+        </ul>
+        <h3 class="text-muted">Policy Compliant Password Setup</h3>
+      </div>
+
+      <div class="jumbotron">
+<!--        <h2>Policy Compliant Password Setup</h2>-->
+        <p class="lead">This is the PCPS admin website. Go ahead and define a password policy. When you're done go ahead and click the button below to login or register a new user.</p>
+        <p class="text-danger">THE SESSION IS RESET AND ALL CHANGES ARE LOST IF YOU REFRESH THE BROWSER.</p>
+<!--        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>-->
+		<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#loginModal" >Login</button>
+      </div>
+
+	<div class="">
+		<h2>Password Policy</h2>
+		<form role="form">
+		  <div class="form-group">
+			<label for="regex">Regular Expression</label>
+			<p>The regular expression specifies mandatory character sets and their number.
+				<ul>
+					<li>d = ASCII digits</li>
+					<li>u = ASCII upper case letters</li>
+					<li>l = ASCII lower case letters</li>
+					<li>s = ASCII symbols</li>
+				</ul>
+				The default policy requires two symbols and one digit.
+			</p>
+			<input type="text" class="form-control" id="regex" value="ssd">
+		  </div>
+		  <div class="row">
+		  <fieldset class="form-inline">
+		  <div class="form-group col-lg-6">
+			<label for="minlengt">Minimum Password Length</label>
+			<input type="number" class="form-control" id="minlength" value="10">
+		  </div>
+		  <div class="form-group col-lg-6">
+			<label for="maxlengt">Maximum Password Length</label>
+			<input type="number" class="form-control" id="maxlength" value="20">
+		  </div>
+		  </fieldset>
+		  </div>
+		  <div class="row">
+			  <p><button type="submit" class="btn btn-success pull-right">Save</button></p>
+		  </div>
+		</form>
+	</div>
+
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="loginModalLabel">Login</h4>
+      </div>
+      <div class="modal-body">
+            <form method="post" action='' role="form" name="login_form">
+              <p><input type="text" class="form-control" name="eid" id="email" placeholder="Email"></p>
+              <p><input type="password" class="form-control" name="passwd" placeholder="Password"></p>
+              <p><button type="submit" class="btn btn-primary">Sign in</button>
+              </p>
+            </form>
+        </div>
+          <div class="modal-footer">
+            New User? 
+            <a href="#" class="btn btn-primary">Register</a>
+          </div>
+       </div>
+     </div>
+   </div>
+   
+   <div class="modal fade" id="aboutModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">About</h4>
+      </div>
+      <div class="modal-body">
+        <p>About stuff &hellip;</p>
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+      <div class="footer">
+        <p>&copy; Franziskus Kiefer 2014</p>
+      </div>
+
+    </div> <!-- /container -->
+
+<script src="./js/jquery-2.1.1.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+</body>
+
+</html>
